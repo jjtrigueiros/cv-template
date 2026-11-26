@@ -11,10 +11,15 @@ A simple CV template written in [Typst](https://typst.app).
 - `icons/` – [Lucide](https://lucide.dev) contact icons (ISC licence)
 - `typst.toml` – package manifest, so the template can be imported from other repos
 
-## Using the template from another (e.g. private) repo
+## Using the template (simple)
 
-> Note: if you don't want to use nix, you can simply edit cv.typ and build with
-> `typst compile cv.typ` (make sure you have the required fonts). 
+Install the Typst CLI, edit `cv.typ` and build with `typst compile cv.typ`.
+
+This will create a `cv.pdf` in this folder.
+
+You may need to install the font, if you do not have it.
+
+## Using the template from another repo
 
 This Nix flake exposes the template as a Typst package and sets `TYPST_PACKAGE_PATH`
 to a Nix store path containing `local/cv-template/<version>/`.
@@ -35,7 +40,11 @@ Then in its `cv.typ`:
 
 The import version must match `version` in `typst.toml`.
 
-## Build
+## Development
 
-Tools and fonts come from the Nix flake.
-Use `nix develop`.
+Tools and fonts come from the Nix flake. Use `nix develop`.
+
+If you use `direnv`, you can auto-start the flake on `cd`.
+Remember to `direnv allow` once.
+
+There is a `justfile` with common commands.
