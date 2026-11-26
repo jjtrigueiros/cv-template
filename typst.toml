@@ -1,0 +1,5 @@
+[package]
+name = "cv-template"
+version = "0.1.0"
+entrypoint = "template.typ"
+description = "A simple, single-page CV template."
