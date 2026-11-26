@@ -2,4 +2,5 @@
 name = "cv-template"
 version = "0.1.0"
 entrypoint = "template.typ"
+license = "MPL-2.0"
 description = "A simple, single-page CV template."
